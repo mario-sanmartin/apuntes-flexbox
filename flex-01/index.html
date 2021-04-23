@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,45 +8,92 @@
     <title>Flex 01</title>
 
     <style>
-        .contianer{
-            background-color: #333;
-            /*display: flex; */
-            display: inline-flex;
-            
+        *,
+        *::after,   
+        *::before{
+            box-sizing: border-box;
         }
 
-        .items{
+
+
+        .container {
+            background-color: #333;
+            height: 30vh;
+
+
+            display: flex;
+            /*flex-direction: row; | row-reverse | column | column-reverse */
+            /*flex-direction: column; */
+            /*flex-wrap: nowrap; | wrap | wrap-reverse */
+          /*  flex-wrap: wrap; */
+
+            /*Atajo*/
+            flex-flow: column wrap;
+
+        }
+
+        .item{
+            border: thin solid #999;
+            width: 20%;
+            height: 20%;
             background-color: #666;
+            overflow-x: auto;
         }
     </style>
 </head>
+
 <body>
-    <div class="contianer">
-        <article class="items">item1</article>
-        <article class="items">item2</article>
-        <article class="items">item3</article> 
+    <div class="container">
+        <article class="item">item1</article>
+        <article class="item">item2</article>
+        <article class="item">item3</article>
     </div>
-
-    <div class="contianer">
-        <article class="items">item1</article>
-        <article class="items">item2</article>
-        <article class="items">item3</article> 
+    <br><br>
+    <div class="container">
+        <article class="item">item1</article>
+        <article class="item">item2</article>
+        <article class="item">item3</article>
     </div>
-
+    <br><br>
+    <section class="container">
+        <article class="item">item1</article>
+        <article class="item">item2</article>
+        <article class="item">item3</article>
+        <article class="item">item4</article>
+        <article class="item">item5</article>
+        <article class="item">item6</article>
+        <article class="item">item7</article>
+        <article class="item">item8</article>
+        <article class="item">item9</article>
+        <article class="item">item10</article>
+        <article class="item">item11</article>
+        <article class="item">item12</article>
+        <article class="item">item13</article>
+        <article class="item">item14</article>
+        <article class="item">item15</article>
+        <article class="item">item16</article>
+        <article class="item">item17</article>
+        <article class="item">item18</article>
+        <article class="item">item19</article>
+    </section>
+    <br><br>
     <div>
         <h1>Flexbox</h1>
         <p>
             <li>
                 <ul>El compartamiento por defecto de los hijos del contenedor
                     Flexbox es desplazarlos de forma horizontal</ul>
-                    <ul>
-                        display:flex = Caja de bloque.
-                        display: inline-flex = caja en linea (como los links)
-                    </ul>
+                <ul>
+                    display:flex = Caja de bloque.
+                    display: inline-flex = caja en linea (como los links)
+                </ul>
             </li>
         </p>
+        <img src="dibujo-1.svg" alt="" width="500px" height="500px">
         <hr>
         <p>Emet trucazo article.item$*3{item$}</p>
+        <p>Wrap emboltorio</p>
     </div>
 </body>
+
 </html>
