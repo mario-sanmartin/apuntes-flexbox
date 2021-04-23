@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex 01</title>
+
+    <style>
+        .contianer{
+            background-color: #333;
+            /*display: flex; */
+            display: inline-flex;
+            
+        }
+
+        .items{
+            background-color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="contianer">
+        <article class="items">item1</article>
+        <article class="items">item2</article>
+        <article class="items">item3</article> 
+    </div>
+
+    <div class="contianer">
+        <article class="items">item1</article>
+        <article class="items">item2</article>
+        <article class="items">item3</article> 
+    </div>
+
+    <div>
+        <h1>Flexbox</h1>
+        <p>
+            <li>
+                <ul>El compartamiento por defecto de los hijos del contenedor
+                    Flexbox es desplazarlos de forma horizontal</ul>
+                    <ul>
+                        display:flex = Caja de bloque.
+                        display: inline-flex = caja en linea (como los links)
+                    </ul>
+            </li>
+        </p>
+        <hr>
+        <p>Emet trucazo article.item$*3{item$}</p>
+    </div>
+</body>
+</html>
