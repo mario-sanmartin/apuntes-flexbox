@@ -24,5 +24,20 @@
    </li>
     <br />
   <p>Esto lo podriamos definir como el flujo que tendra la caja</p>
+       <h4>Justify-Content</h4>
+       <p> Valor que acepta </p>
+       <ul>
+  <li><p>Default: flex-start o alineacion a la izquierda. </p> </li>
+    <li><p>Center. </p> </li>
+    <li><p>Flex-end o alineacion a la derecha</p> </li>
+      <li><p>Space-between:Reparte el espacio de los hijos sin considerar las orillas</p> </li>
+        <li><p>Space-around:Reparte el espacio de los hijos  considerara las orillas</p> </li>
+        <li><p>Space-evenly:Reparte el espacio de los hijos considerando las orillas de igual forma</p> </li>
+  <li>Define la alineación en el eje principal y <i>¿Quien carajo define esto?, si cabeza de pollo el buen <strong>Flex-direction</strong></li>
+  <li>Esto aplicara respecto el espacio sobrante del elemento padre</li>
+  </ul>
+  <i>Nota</i>
+  <p>Column = alineacion sobre Y<p>
+  <p>Row = alineacion sobre X </p>
   </p>  
 </p>
