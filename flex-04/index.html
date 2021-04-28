@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-grow</title>
+
+    <style>
+        *,
+        *::after,   
+        *::before{
+            box-sizing: border-box;
+        }
+
+
+
+        .container {
+            background-color: #333;
+            height: 30vh;
+            width: 1000px;
+
+            display: flex;
+            flex-flow: row nowrap;            
+            justify-content: flex-start;
+            
+            align-items: stretch;
+            align-content: stretch;
+            
+          /*  align-items: stretch; | flex-start | center | flex-end |  */
+            /*align-content: space-around; */
+
+        }
+
+        .item{
+            border: thin solid #999;
+            background-color: #666;
+            width: 100px;
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: auto;
+        }
+        .item:nth-child(2){
+            flex-grow: 2;
+        }
+        .item:nth-child(3){
+            flex-grow: 4;
+        }
+ 
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <article class="item">item1</article>
+        <article class="item">item2</article>
+        <article class="item">item3</article>
+    </div>
+    <br><br>
+    <div class="container">
+        <article class="item">item1</article>
+        <article class="item">item2</article>
+        <article class="item">item3</article>
+    </div> 
+    <br><br>
+    <div>
+        <h1>Flex-grow</h1>
+        <p>
+            <li>
+                <ul>Factor de crecimiento de los hijos, valor por defecto es 0, no se aceptan valores negativos
+                    </ul>
+            </li>
+        </p>
+    </div>
+    <div>
+        <h1>Flex-shrink</h1>
+        <p>
+            <li>
+                <ul>Factor de reduccion de los hijos, valor por defecto es 1, no se aceptan valores negativos
+                    </ul>
+            </li>
+        </p>
+    </div>
+    <div>
+        <h1>Flex-bassis</h1>
+        <p>
+            <li>
+                <ul>
+                    </ul>
+            </li>
+        </p>
+    </div>
+</body>
+
+</html>

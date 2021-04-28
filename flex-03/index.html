@@ -21,10 +21,11 @@
             height: 30vh;
 
             display: flex;
-            flex-flow: row nowrap;            
+            flex-flow: column wrap;            
             justify-content: flex-start;
             
-            align-items: baseline;
+            align-items: center;
+            
           /*  align-items: stretch; | flex-start | center | flex-end |  */
             /*align-content: space-around; */
 
@@ -38,9 +39,10 @@
             overflow-x: auto;
         }
         /*el segundo elemento de cada item*/
-        .item:nth-child(2){
+       /* .item:nth-child(2){
             font-size: 250%;
         }
+        */
     </style>
 </head>
 
@@ -80,19 +82,24 @@
     </section>
     <br><br>
     <div>
-        <h1>Flexbox</h1>
+        <h1>align-items</h1>
         <p>
             <li>
-                <ul>El compartamiento por defecto de los hijos del contenedor
-                    Flexbox es desplazarlos de forma horizontal</ul>
-                <ul>
-                    display:flex = Caja de bloque.
-                    display: inline-flex = caja en linea (como los links)
-                </ul>
+                <ul>Funciona para alinear los hijos en el eje transversal
+                    (cross axis) dentro de cada linea
+                    </ul>
+                    <ul>Quien alinea la columna es justify-content a no olvidar y quien alinea a fila es align-items</ul>
             </li>
         </p>
-        <p>Emet trucazo article.item$*3{item$}</p>
-        <p>Wrap emboltorio</p>
+    </div>
+    <div>
+        <h1>justify-content</h1>
+        <p>
+            <li>
+                <ul>Define la alineacion de los hijos en el eje principal (main axis) ,
+                    NO funciona cuando los hijos estan en una sola linea                  </ul>
+            </li>
+        </p>
     </div>
 </body>
 
