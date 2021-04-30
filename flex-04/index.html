@@ -9,8 +9,8 @@
 
     <style>
         *,
-        *::after,   
-        *::before{
+        *::after,
+        *::before {
             box-sizing: border-box;
         }
 
@@ -19,57 +19,127 @@
         .container {
             background-color: #333;
             height: 30vh;
-            width: 1000px;
+            width: 100%;
 
             display: flex;
-            flex-flow: row nowrap;            
+            /* flex-flow: row nowrap; */
+            flex-direction: row;
+            flex-wrap: nowrap;
             justify-content: flex-start;
-            
+
             align-items: stretch;
-            align-content: stretch;
-            
-          /*  align-items: stretch; | flex-start | center | flex-end |  */
+            align-content: flex-start;
+
+            /*  align-items: stretch; | flex-start | center | flex-end |  */
             /*align-content: space-around; */
 
         }
 
-        .item{
-            border: thin solid #999;
+        .item {
+            border: medium solid #999;
             background-color: #666;
-            width: 100px;
-            flex-grow: 1;
+            flex-grow: 0;
             flex-shrink: 1;
-            flex-basis: auto;
+            flex-basis: 100px;
+
+            /*
+            factor de encogimiento
+            1- 79.77 -3.57 = 76.2
+            2-79.77-(3.57*2) = 72.63
+            3- 79.77 -3.57 = 76.2
+
+            */
+
+            flex: 0 1 2;
+            /*
+            Shorthand de las propiedades 
+            flex-grow | flex-shrink | flex-basis en ese orden
+            */
+            order:0;
+            /*Representa el order que tendras los elementos hijos 
+            en la caja flexbox
+            valor por defecto 0
+            se aceptar valores + o - 
+            un valor negativo siempre ira antes que uno positivo
+            */
+            align-self: stretch;
+            /*
+            ALineate a ti mismo
+            Strech | flex-start | flex-end | flex-center | baseline
+            mismos valores que acepta align-items de la caja padre
+            SObreescribre el valor de la propiedad align-items solo para el elemento 
+            hijo especificado
+            */
         }
-        .item:nth-child(2){
-            flex-grow: 2;
+
+        .item:nth-child(2) {
+            /* flex-shrink: 4;*/
+            flex: 1 0 auto;
+            order: -1;
         }
-        .item:nth-child(3){
-            flex-grow: 4;
+        .item:nth-child(3) {
+            /* flex-shrink: 4;*/
+          align-self: stretch;
         }
- 
+
+        .clase2 {
+            background-color: #333;
+            height: 30vh;
+            width: 100%;
+
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: flex-start;
+
+            /*align-items: center; */
+            align-content: flex-end;
+        }
+
+        .items {
+            border: medium solid #999;
+            background-color: #666;
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: 100px;
+            align-self: stretch;
+        }
+        .items:nth-child(2){
+            order: -1;
+        }
+        .items:nth-child(3){
+            order: -1;
+           
+        }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <article class="item">item1</article>
-        <article class="item">item2</article>
-        <article class="item">item3</article>
-    </div>
+    <section class="container">
+        <h2>flex-basis en fila = considera el ancho</h2>
+
+        <article class="item">Madara Uchija</article>
+        <article class="item">Sasuke Uchija</article>
+        <article class="item">Itachy Uchija</article>
+    </section>
     <br><br>
-    <div class="container">
-        <article class="item">item1</article>
-        <article class="item">item2</article>
-        <article class="item">item3</article>
-    </div> 
+    <br><br>
+    <section class="clase2">
+        <h2>flex-basis en columna = considera el alto</h2>
+        <article class="items">Madara Uchija</article>
+        <article class="items">Sasuke Uchija</article>
+        <article class="items">Itachy Uchija</article>
+    </section>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
     <br><br>
     <div>
         <h1>Flex-grow</h1>
         <p>
             <li>
                 <ul>Factor de crecimiento de los hijos, valor por defecto es 0, no se aceptan valores negativos
-                    </ul>
+                </ul>
             </li>
         </p>
     </div>
@@ -78,7 +148,7 @@
         <p>
             <li>
                 <ul>Factor de reduccion de los hijos, valor por defecto es 1, no se aceptan valores negativos
-                    </ul>
+                </ul>
             </li>
         </p>
     </div>
@@ -87,7 +157,15 @@
         <p>
             <li>
                 <ul>
-                    </ul>
+                    Es el tamaño del elemento hijo dentro de la linea de la caja flexbox
+                </ul>
+                <ul>
+                    Si la caja flexbox tiene direccion de fila , flex-basis represente el ancho (width)
+                </ul>
+                <ul>
+                    Si la caja flexbox tiene direccion de columna, flex-basis representa el alto (height)
+                </ul>
+                <ul>Su valor por defecto es auto</ul>
             </li>
         </p>
     </div>
