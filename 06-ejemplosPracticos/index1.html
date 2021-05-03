@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,61 +9,78 @@
     <style>
         *,
         ::after,
-        ::before{
+        ::before {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
-        body{
+        body {
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
 
-        main{
+        main {
             flex-grow: 1;
         }
-        
-        .titulares{
+
+        .titulares {
             padding: 1rem;
             background-color: #222;
             color: #EEE;
         }
 
-        header{
+        header {
             display: flex;
-            flex-direction: column; /*alineacion en eje Y */
-            align-items: center; /*centramos la caja en el eje Y*/
-            text-align: center; /*Centramos el texto*/
+            flex-direction: column;
+            /*alineacion en eje Y */
+            align-items: center;
+            /*centramos la caja en el eje Y*/
+            text-align: center;
+            /*Centramos el texto*/
         }
 
-        .menu ul{
+        .menu ul {
             list-style-type: none;
         }
 
-        .menu li{
+        .menu li {
             padding: 5px;
         }
+
+        .hero-image {
+            min-height: 100vh;
+            background-image: url("https://placeimg.com/1280/720/animals");
+            color: #FFF;
+            background-repeat: no-repeat;
+
+        }
+
+        .hero-image div {
+            min-height: inherit;
+            background-color: rgba(0,0,0,75);
+        }
+
         @media screen and (min-width:1024px) {
-            header{
+            header {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
             }
 
-            .menu ul{
+            .menu ul {
                 display: flex;
 
             }
 
-            .menu li{
+            .menu li {
                 padding: 10px;
             }
         }
-
     </style>
 </head>
+
 <body>
     <header class="titulares header">
         <div class="logo">LOGO</div>
@@ -77,6 +95,11 @@
     </header>
     <main>
         <h2>Contenido</h2>
+        <article class="hero-image">
+            <div>
+                <h1>Flexbox is fuckin'COOL'</h1>
+            </div>
+        </article>
     </main>
     <footer class="titulares">
         <h2>
@@ -84,4 +107,5 @@
         </h2>
     </footer>
 </body>
+
 </html>
