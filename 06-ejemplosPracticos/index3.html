@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio Flexbox #2</title>
+    <title>Ejercicio Flexbox #3</title>
     <style>
         *,
         ::after,
@@ -80,9 +80,19 @@
         .hero-image h1 {
             font-size: 5vw;
             /*adaptable al tamaño del viewport*/
-
         }
 
+        .flex-responsive{
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        .flex-responsive-item{
+            border: thin solid #F60;
+            flex: 1 1 200px;
+            /*La propiedad que le asignemos al flex-basis
+            sera el minimo de tamaño que tendra cada columna*/
+        }
         @media screen and (min-width:1024px) {
             header {
                 display: flex;
@@ -171,10 +181,31 @@
                 <img src="https://placeimg.com/400/400/arch" alt="">
             </article>
         </section>
+        <section class="flex-responsive">
+            <article class="flex-responsive-item">item responsivo 1</article>
+            <article class="flex-responsive-item">item responsivo 2</article>
+            <article class="flex-responsive-item">item responsivo 3</article>
+            <article class="flex-responsive-item">item responsivo 4</article>
+            <article class="flex-responsive-item">item responsivo 5</article>
+            <article class="flex-responsive-item">item responsivo 6</article>
+            <article class="flex-responsive-item">item responsivo 7</article>
+            <article class="flex-responsive-item">item responsivo 8</article>
+            <article class="flex-responsive-item">item responsivo 9</article>
+            <article class="flex-responsive-item">item responsivo 10</article>
+            <article class="flex-responsive-item">item responsivo 11</article>
+            <article class="flex-responsive-item">item responsivo 12</article>
+            <article class="flex-responsive-item">item responsivo 13</article>
+            <article class="flex-responsive-item">item responsivo 14</article>
+            <article class="flex-responsive-item">item responsivo 15</article>
+            <article class="flex-responsive-item">item responsivo 16</article>
+            <article class="flex-responsive-item">item responsivo 17</article>
+            <article class="flex-responsive-item">item responsivo 18</article>
+            <article class="flex-responsive-item">item responsivo 19</article>
+        </section>
     </main>
     <footer class="titulares">
         <h2>
-            Footer
+            Footer Sticky
         </h2>
     </footer>
 </body>
