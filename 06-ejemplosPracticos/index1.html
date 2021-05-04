@@ -52,14 +52,23 @@
         .hero-image {
             min-height: 100vh;
             background-image: url("https://placeimg.com/1280/720/animals");
-            color: #FFF;
             background-repeat: no-repeat;
+            color: #FFF;
 
         }
 
         .hero-image div {
-            min-height: inherit;
-            background-color: rgba(0,0,0,75);
+            min-height: inherit; /*heredar*/
+            display: flex;
+            justify-content: center; /*Alineacion eje Y*/
+            align-items: center; /*Alineacion eje X*/
+            text-align: center;
+            background-color: rgba(0, 0, 0, .75);
+        }
+
+        .hero-image h1{
+            font-size: 5vw; /*adaptable al tamaño del viewport*/
+
         }
 
         @media screen and (min-width:1024px) {
@@ -97,7 +106,7 @@
         <h2>Contenido</h2>
         <article class="hero-image">
             <div>
-                <h1>Flexbox is fuckin'COOL'</h1>
+                <h1>Flexbox is fuckin'COOL'!!!</h1>
             </div>
         </article>
     </main>
